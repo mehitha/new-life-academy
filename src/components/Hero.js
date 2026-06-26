@@ -32,8 +32,14 @@ function Hero() {
         style={{
           backgroundImage: `url(${images[index]})`,
           backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundPosition: "center",
+           position: 'relative',
+          width: '100%',
+          height: '90vh',
+          minHeight: '150px',
+          overflow: 'hidden',
         }}
+        
       >
         <div className="hero-overlay">
           {/* <p className="hero-small">Wisdom Foundation</p> */}

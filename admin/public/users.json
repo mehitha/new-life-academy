@@ -1,21 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "John Doe",
-    "role": "admin",
-    "email": "admin@gmail.com",
-    "phone": "9876543210",
-    "password": "1234"
-  },
-  {
-    "id": 2,
-    "name": "Jane User",
-    "role": "user",
-    "email": "user@gmail.com",
-    "phone": "9876543211",
-    "password": "5678"
-  },
-  {
     "id": 3,
     "name": "Mehitha Mehitha",
     "role": "user",

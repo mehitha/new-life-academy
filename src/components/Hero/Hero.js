@@ -159,29 +159,43 @@ import contactHero from "./about.png";
 
 const Hero = () => {
   return (
-    <section className="contact-hero">
-      {/* ✅ Use Next.js Image */}
-      <Image 
-        src={contactHero} 
-        alt="Contact Banner" 
-        className="hero-image"
-        fill
-        priority
-        style={{ objectFit: "cover" }}
-      />
-      <div className="hero-overlay"></div>
-
-      <div className="hero-content">
-        <motion.h1
-          className="hero-title"
-          initial={{ opacity: 0, y: 30, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          About Us
-        </motion.h1>
-      </div>
-    </section>
+    <section 
+     className="contact-hero"
+     style={{
+       position: 'relative',
+       width: '100%',
+       height: '50vh',
+       minHeight: '150px',
+       overflow: 'hidden',
+     }}
+   >
+     <Image 
+       src={contactHero} 
+       alt="Contact us banner" 
+       className="hero-image"
+       fill
+       priority
+       style={{ objectFit: "cover", objectPosition: "center 35%" }}
+     />
+     <div className="hero-overlay" />
+    <div className="hero-content">
+  <motion.h1 
+    className="hero-title"
+    // style={{ 
+    //   fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
+    //   fontFamily: ' "Georgia", serif',  // ✅ Premium font
+    //   color: '#FFFFFF',
+    //   fontWeight: '800',
+    //   letterSpacing: '1px',
+    // }}
+    initial={{ opacity: 0, y: 30, scale: 0.95 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    About Us
+  </motion.h1>
+</div>
+   </section>
   );
 };
 

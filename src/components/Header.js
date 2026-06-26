@@ -54,17 +54,17 @@ function Header() {
       <nav className="navbar">
         {/* LOGO */}
         <div className="logo">
-          <Link href="/" onClick={closeMenu}>
-            <Image 
-              src="/new1.png" 
-              alt="logo" 
-              width={60}
-              height={60}
-              className="logo-img"
-              style={{ transform: "scale(1.6)" }}
-              priority
-            />
-          </Link>
+        <Link href="/" onClick={closeMenu}>
+  <Image 
+    src="/new1.png" 
+    alt="logo" 
+    width={50}
+    height={55}
+    unoptimized  // ✅ Skip Next.js image optimization
+    style={{ transform: "scale(1.6)" }}
+    priority
+  />
+</Link>
         </div>
 
         {/* HAMBURGER BUTTON */}

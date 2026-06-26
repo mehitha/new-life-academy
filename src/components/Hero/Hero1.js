@@ -219,22 +219,37 @@ const Hero = () => {
     <>
       {/* ✅ Remove <style> tag - CSS moved to hero.css */}
 
-      <section className="contact-hero">
-        <Image 
-          src={contactHero} 
-          alt="Contact Banner" 
-          className="hero-image"
-          fill
-          priority
-          style={{ objectFit: "cover", objectPosition: "center" }}
-        />
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <motion.h1 className="hero-title">
-            Our Gallery
-          </motion.h1>
-        </div>
-      </section>
+      <section 
+       className="contact-hero"
+       style={{
+         position: 'relative',
+         width: '100%',
+         height: '50vh',
+         minHeight: '150px',
+         overflow: 'hidden',
+       }}
+     >
+       <Image 
+         src={contactHero} 
+         alt="Contact us banner" 
+         className="hero-image"
+         fill
+         priority
+         style={{ objectFit: "cover", objectPosition: "center 55%" }}
+       />
+       <div className="hero-overlay" />
+      <div className="hero-content">
+  <motion.h1 
+    className="hero-title"
+    style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}  // Increased size
+    initial={{ opacity: 0, y: 30, scale: 0.95 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    Our Gallery
+  </motion.h1>
+</div>
+     </section>
     </>
   );
 };

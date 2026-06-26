@@ -6,6 +6,7 @@
 }
 
 /* Top Bar */
+
 .topbar {
   background: #2d2d2d;
   color: white;
@@ -485,6 +486,7 @@
 @media (max-width: 480px) {
   .logo img {
     width: 90px;
+transform: scale(0.8);
   }
 
   .donate-btn {
@@ -632,13 +634,14 @@
 } */
 
 /* ===== LOGO SIZE IN MOBILE ===== */
-@media (max-width: 768px) {
+@media (max-width: 1068px) {
   .logo {
     width: 20px !important;  /* ← REDUCED WIDTH */
   }
     .logo img {
-    width: 60px !important;  /* ← SMALLER LOGO */
-    height: 60px !important;
+    width: 35px !important;  /* ← SMALLER LOGO */
+    height: 40px !important;
+    transform: scale(0.8);
   
   }
 

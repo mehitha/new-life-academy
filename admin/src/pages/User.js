@@ -200,8 +200,8 @@ const User = () => {
         flexWrap: "wrap",
         gap: "10px"
       }}>
-        <h2>👥 User Management</h2>
-        <button 
+        <h2> User Management</h2>
+        {/* <button 
           onClick={loadUsers}
           style={{
             padding: "8px 16px",
@@ -214,10 +214,10 @@ const User = () => {
           }}
         >
           🔄 Reload Users
-        </button>
+        </button> */}
       </div>
 
-      <h2>{editingId ? "✏️ Edit User" : "➕ Create User"}</h2>
+      <h2>{editingId ? "Edit User" : " Create User"}</h2>
 
       <form onSubmit={handleSubmit} style={{ 
         display: "grid", 
@@ -297,7 +297,7 @@ const User = () => {
         )}
       </form>
 
-      <h2>📋 Users List ({users.length})</h2>
+      <h2>Users List ({users.length})</h2>
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "20px" }}>
         {users.length > 0 ? (

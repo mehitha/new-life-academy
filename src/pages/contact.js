@@ -96,27 +96,37 @@ const Contact = () => {
 
       <div className="contact-page">
         {/* HERO SECTION */}
-        <section className="contact-hero">
-          <Image 
-            src={contactHero} 
-            alt="Contact us banner" 
-            className="hero-image"
-            fill
-            priority
-            style={{ objectFit: "cover", objectPosition: "center 55%" }}
-          />
-          <div className="hero-overlay" />
-          <div className="hero-content">
-            <motion.h1 
-              className="hero-title"
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+        <section 
+              className="contact-hero"
+              style={{
+                position: 'relative',
+                width: '100%',
+                height: '60vh',
+                minHeight: '150px',
+                overflow: 'hidden',
+              }}
             >
-              Contact Us
-            </motion.h1>
-          </div>
-        </section>
+              <Image 
+                src={contactHero} 
+                alt="Contact us banner" 
+                className="hero-image"
+                fill
+                priority
+                style={{ objectFit: "cover", objectPosition: "center 55%" }}
+              />
+              <div className="hero-overlay" />
+              <div className="hero-content">
+                <motion.h1 
+                  className="hero-title"
+                  // style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+               Contact Us
+                </motion.h1>
+              </div>
+            </section>
 
         {/* BODY SECTION */}
         <section className="contact-body">

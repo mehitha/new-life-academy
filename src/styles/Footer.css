@@ -43,8 +43,8 @@
 .footer-logo img {
   margin-bottom: 15px;
   display: block;
-  width: 100px;
-  height: auto;
+  width: 80px;
+  height: 90px;
   margin-left: 145px;
   margin-right: auto;
   margin-top: -10px;
@@ -583,7 +583,7 @@
 }
 
 /* iPad Air (820px - 1024px) */
-@media (min-width: 821px) and (max-width: 1024px) {
+@media (min-width: 821px) and (max-width: 1924px) {
   .footer {
     padding: 35px 35px 20px;
   }
@@ -606,7 +606,7 @@
     display: block;
     margin-top: 0;
     top: 0;
-    width: 100px;
+    width: 80px;
   }
   
   .footer-logo p {

@@ -21,15 +21,20 @@ function Footer() {
         
         {/* Column 1 - Left */}
         <div className="footer-logo">
-          <Link href="/">  {/* ✅ Wrap logo with Link */}
-            <Image 
-              src="/new3.png" 
-              alt="new life academy Logo" 
-              width={40}
-              height={40}
-              priority
-            />
-          </Link>
+         <Link href="/">
+ <Image 
+  src="/new3.png" 
+  alt="new life academy Logo" 
+  width={40}
+  height={40}
+  unoptimized
+  priority
+  style={{ 
+    transform: 'scale(0.8)',  // ✅ Reduce size
+    transformOrigin: 'center',
+  }}
+/>
+</Link>
           
           <p>
             New Life Academy is a youth-focused initiative dedicated to shaping a healthier and more purpose

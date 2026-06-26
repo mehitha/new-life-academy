@@ -504,7 +504,8 @@ const Team = () => {
       <Hero title="Our Team" subtitle="✿ Meet Our Dedicated Volunteers" />
 
       <section className="team">
-        <h2 className="team-title">
+        <h2 className="team-title"
+        style={{marginTop: '-20px'}}>
           Our <span>Resource</span> People
         </h2>
 
