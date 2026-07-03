@@ -583,7 +583,7 @@
 }
 
 /* iPad Air (820px - 1024px) */
-@media (min-width: 821px) and (max-width: 1924px) {
+@media (min-width: 821px) and (max-width: 1024px) {
   .footer {
     padding: 35px 35px 20px;
   }
