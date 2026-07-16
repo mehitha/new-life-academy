@@ -1445,8 +1445,8 @@ export default function Testimonials() {
         <div className="t-wrap" style={{maxWidth:1260,margin:"0 auto",padding:"64px 32px 72px",textAlign:"center"}}>
           <h2 className="t-h2" onClick={handleHeadingClick}
             style={{fontSize:"clamp(1.8rem,4vw,2.9rem)",fontWeight:900,color:"#0c2c55",lineHeight:1.2,marginBottom:10,cursor:"default",userSelect:"none"}}>
-            Our Valuable <span style={{color:"#d4861f"}}>Student's</span>
-            <br/>Awesome Feedback
+            Our <span style={{color:"#d4861f"}}>Student's</span>
+            <br/>Valuable Feedback
           </h2>
 
           {loading&&(
@@ -1495,8 +1495,8 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {showPwd&&<PasswordGate onClose={()=>setShowPwd(false)} onSuccess={()=>{setShowPwd(false);setShowAdmin(true);}}/>}
-      {showAdmin&&<AdminModal testimonials={testimonials} onClose={()=>setShowAdmin(false)} onRefresh={fetchAll}/>}
+      {/* {showPwd&&<PasswordGate onClose={()=>setShowPwd(false)} onSuccess={()=>{setShowPwd(false);setShowAdmin(true);}}/>}
+      {showAdmin&&<AdminModal testimonials={testimonials} onClose={()=>setShowAdmin(false)} onRefresh={fetchAll}/>} */}
     </>
   );
 }
