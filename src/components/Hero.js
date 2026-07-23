@@ -4,7 +4,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function Hero() {
 
-  const images = ["/hero2.png", "/hero1.png", "/hero3.png"];
+  const images = ["/hero1.png", "/hero2.png", "/hero3.png","/hero4.png"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -26,21 +26,50 @@ function Hero() {
   return (
     <>
       {/* 🔥 HERO SECTION */}
-      <section
-        key={index}
-        className="hero"
-        style={{
-          backgroundImage: `url(${images[index]})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-           position: 'relative',
-          width: '100%',
-          height: '90vh',
-          minHeight: '150px',
-          overflow: 'hidden',
-        }}
-        
-      >
+     <section
+  key={index}
+  className="hero"
+  style={{
+    backgroundImage: `url(${images[index]})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    position: "relative",
+    width: "100%",
+    overflow: "hidden",
+  }}
+>
+  {/* Your content */}
+
+
+<style jsx>{`
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 110vh; /* Desktop */
+    overflow: hidden;
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .hero {
+      height: 35vh;
+    }
+  }
+
+  /* iPad Mini & iPad */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+      height: 50vh;
+    }
+  }
+
+  /* iPad Pro */
+  @media (min-width: 1025px) and (max-width: 1466px) {
+    .hero {
+      height: 100vh;
+    }
+  }
+`}</style>
         <div className="hero-overlay">
           {/* <p className="hero-small">Wisdom Foundation</p> */}
         </div>

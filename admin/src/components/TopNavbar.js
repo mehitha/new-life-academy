@@ -55,13 +55,13 @@ function TopNavbar() {
                 <FaBars size={22} />
               </div>
               <div style={styles.mobileLogo}>
-                <img src="/logo.png" alt="logo" style={styles.logoImgMobile} />
+                <img src="/new1.ico" alt="logo" style={styles.logoImgMobile} />
               </div>
             </div>
           ) : (
             // DESKTOP: Only logo
             <div style={styles.logo}>
-              <img src="/logo.png" alt="logo" style={styles.logoImg} />
+              <img src="/new1.ico" alt="logo" style={styles.logoImg} />
             </div>
           )}
         </div>

@@ -158,46 +158,71 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from 'next/image';  // ✅ Add Next.js Image
-import contactHero from "./reso.png";
+import contactHero from "./reso123.png";
 
 const Hero = () => {
-  return (
-    <>
-      {/* ✅ Remove <style> tag - move CSS to separate file */}
+    return (
+        <>
+            <style jsx>{`
+                .contact-hero {
+                    position: relative;
+                    width: 100%;
+                    height: 50vh;           /* 📱 Mobile default */
+                    min-height: 180px;
+                    overflow: hidden;
+                }
 
-      <section 
-       className="contact-hero"
-       style={{
-         position: 'relative',
-         width: '100%',
-         height: '50vh',
-         minHeight: '150px',
-         overflow: 'hidden',
-       }}
-     >
-       <Image 
-         src={contactHero} 
-         alt="Contact us banner" 
-         className="hero-image"
-         fill
-         priority
-         style={{ objectFit: "cover", objectPosition: "center 50%" }}
-       />
-       <div className="hero-overlay" />
-       <div className="hero-content">
-         <motion.h1 
-           className="hero-title"
-          //  style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}
-           initial={{ opacity: 0, y: 30, scale: 0.95 }}
-           animate={{ opacity: 1, y: 0, scale: 1 }}
-           transition={{ duration: 0.8, ease: "easeOut" }}
-         >
-         Resource People
-         </motion.h1>
-       </div>
-     </section>
-    </>
-  );
+                /* 📱 Mobile (portrait & landscape) - 40vh */
+                @media (max-width: 767px) {
+                    .contact-hero {
+                        height: 15vh;
+                        min-height: 150px;
+                    }
+                }
+
+                /* 📱 iPad Mini (768px - 1024px) - 60vh */
+                @media (min-width: 768px) and (max-width: 1224px) {
+                    .contact-hero {
+                        height: 20vh;
+                        min-height: 250px;
+                    }
+                }
+
+                /* 📱 iPad Pro (1025px - 1366px) - 60vh */
+                @media (min-width: 1025px) and (max-width: 1366px) {
+                    .contact-hero {
+                        height: 30vh;
+                        min-height: 300px;
+                    }
+                }
+
+               
+                }
+
+            `}</style>
+
+            <section className="contact-hero">
+                <Image
+                    src={contactHero}
+                    alt="Contact us banner"
+                    className="hero-image"
+                    fill
+                    priority
+                />
+                <div className="hero-overlay" />
+                {/* <div className="hero-content">
+                    <motion.h1
+                        className="hero-title"
+                        initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        About Us
+                    </motion.h1>
+                </div> */}
+            </section>
+        </>
+    );
 };
 
 export default Hero;

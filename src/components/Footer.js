@@ -72,9 +72,9 @@ function Footer() {
         <div className="footer-contact">
           <h4>Get In Touch</h4>
           <ul>
-            <li><FaMapMarkerAlt /> <span>NEW LIFE SOCIETY
-13/81A ,MAIN ROAD NALUMAVADI
-TUTICORIN 628211 ,
+            <li><FaMapMarkerAlt /> <span>NEW LIFE SOCIETY,
+13/81A, MAIN ROAD, NALUMAVADI,
+TUTICORIN 628211,
 Tamil Nadu, India</span></li>
             <li><FaPhoneAlt /> +919942235305</li>
             <li><FaEnvelope /> mt@newlifesociety.in</li>

@@ -94,39 +94,67 @@ const Contact = () => {
     <>
       {/* <Header /> */}
 
-      <div className="contact-page">
+      <div className="contact-page"
+      >
+        
         {/* HERO SECTION */}
-        <section 
-              className="contact-hero"
-              style={{
-                position: 'relative',
-                width: '100%',
-                height: '60vh',
-                minHeight: '150px',
-                overflow: 'hidden',
-              }}
-            >
-              <Image 
-                src={contactHero} 
-                alt="Contact us banner" 
-                className="hero-image"
-                fill
-                priority
-                style={{ objectFit: "cover", objectPosition: "center 55%" }}
-              />
-              <div className="hero-overlay" />
-              <div className="hero-content">
-                <motion.h1 
-                  className="hero-title"
-                  // style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}
-                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-               Contact Us
-                </motion.h1>
-              </div>
-            </section>
+      <section
+  className="contact-hero"
+  style={{
+    position: "relative",
+    width: "100%",
+    overflow: "hidden",
+  }}
+>
+  <Image
+    src={contactHero}
+    alt="Contact us banner"
+    className="hero-image"
+    fill
+    priority
+    style={{ objectFit: "inherit", objectPosition: "center 55%" }}
+  />
+
+  <div className="hero-overlay" />
+
+  <div className="hero-content">
+    {/* Content */}
+  </div>
+</section>
+
+<style jsx>{`
+  .contact-hero {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Desktop */
+    min-height: 180px;
+    overflow: hidden;
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .contact-hero {
+      height: 15vh;
+      min-height: 150px;
+    }
+  }
+
+  /* iPad Mini & iPad */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .contact-hero {
+      height: 20vh;
+      min-height: 250px;
+    }
+  }
+
+  /* iPad Pro */
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    .contact-hero {
+      height: 30vh;
+      min-height: 300px;
+    }
+  }
+`}</style>
 
         {/* BODY SECTION */}
         <section className="contact-body">
@@ -139,8 +167,8 @@ const Contact = () => {
                 <div>
                   <div className="info-item"><MapPin className="info-icon" /><h4 className="info-label">Location</h4></div>
                   <p className="info-value">New Life Academy,
-13/81A ,Main Road Nalumavadi,
-Tuticorin 628211 ,
+13/81A, Main Road Nalumavadi,
+Tuticorin 628211,
 Tamil Nadu, India</p>
                 </div>
                 <div>
@@ -240,7 +268,7 @@ Tamil Nadu, India</p>
                   <School className="input-icon" />
                 </div>
 
-                <div className="input-group">
+                <div className="">
                   <select name="purpose" className="input-field" required onChange={handlePurposeChange}>
                     <option value="">Select Purpose</option>
                     <option value="Feedback">Feedback</option>
